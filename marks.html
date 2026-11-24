@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks & Results | AcadTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>AcadTrack</h2>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="students.html">Students</a>
+            <a href="marks.html" class="active">Marks & Results</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="report-card.html">Report Cards</a>
+            <a href="settings.html">Settings</a>
+        </nav>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Page Header -->
+        <header class="topbar">
+            <div>
+                <h1>Marks & Results</h1>
+                <p>Enter and manage student examination marks.</p>
+            </div>
+        </header>
+
+
+        <!-- Marks Entry Form -->
+        <section class="content-card">
+
+            <h2>Enter Student Marks</h2>
+
+            <form id="marksForm">
+
+                <div class="form-grid">
+                    <div class="form-group">
+    <label for="marksStudent">Select Student</label>
+
+    <select id="marksStudent" required>
+        <option value="">Select a student</option>
+    </select>
+</div>
+                 
+
+
+
+                    <div class="form-group">
+                        <label for="examName">Examination</label>
+
+                        <select id="examName" required>
+                            <option value="">Select examination</option>
+                            <option value="Unit Test 1">Unit Test 1</option>
+                            <option value="Mid-Term">Mid-Term</option>
+                            <option value="Final Examination">Final Examination</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="subjectName">Subject</label>
+
+                        <input
+                            type="text"
+                            id="subjectName"
+                            placeholder="Enter subject name"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="marksObtained">Marks Obtained</label>
+
+                        <input
+                            type="number"
+                            id="marksObtained"
+                            min="0"
+                            placeholder="Enter marks"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="maximumMarks">Maximum Marks</label>
+
+                        <input
+                            type="number"
+                            id="maximumMarks"
+                            min="1"
+                            value="100"
+                            required
+                        >
+                    </div>
+
+                </div>
+
+
+                <button type="submit" class="primary-btn">
+                    Save Marks
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Student Results -->
+        <section class="content-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Student Results</h2>
+                    <p>Saved subject-wise examination records.</p>
+                </div>
+
+                <input
+                    type="search"
+                    id="marksSearch"
+                    placeholder="Search by student or subject..."
+                >
+
+            </div>
+
+
+            <!-- Results Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Enrollment No.</th>
+                            <th>Examination</th>
+                            <th>Subject</th>
+                            <th>Marks</th>
+                            <th>Percentage</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody id="marksTableBody">
+
+                        <tr>
+                            <td colspan="7">
+                                Loading results...
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- JavaScript -->
+<script src="app.js"></script>
+
+</body>
+</html>
+

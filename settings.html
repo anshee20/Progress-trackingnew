@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | AcadTrack</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <h2>AcadTrack</h2>
+
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="students.html">Students</a>
+            <a href="marks.html">Marks & Results</a>
+            <a href="analytics.html">Analytics</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="report-card.html">Report Cards</a>
+            <a href="settings.html" class="active">Settings</a>
+        </nav>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>System Settings</h1>
+                <p>Configure your academic tracking system.</p>
+            </div>
+        </header>
+
+        <!-- Institution Settings -->
+        <section class="content-card">
+
+            <h2>Institution Information</h2>
+
+            <form id="institutionForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="institutionName">
+                            Institution Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="institutionName"
+                            placeholder="Enter institution name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="academicYear">
+                            Academic Year
+                        </label>
+
+                        <input
+                            type="text"
+                            id="academicYear"
+                            placeholder="Example: 2026-2027"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institutionEmail">
+                            Institution Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="institutionEmail"
+                            placeholder="Enter official email"
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="institutionPhone">
+                            Contact Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="institutionPhone"
+                            placeholder="Enter contact number"
+                        >
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Save Institution Details
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Examination Settings -->
+        <section class="content-card">
+
+            <h2>Examination Settings</h2>
+
+            <form id="examSettingsForm">
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="maximumMarksSetting">
+                            Default Maximum Marks
+                        </label>
+
+                        <input
+                            type="number"
+                            id="maximumMarksSetting"
+                            min="1"
+                            value="100"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="passingPercentage">
+                            Passing Percentage
+                        </label>
+
+                        <input
+                            type="number"
+                            id="passingPercentage"
+                            min="0"
+                            max="100"
+                            value="40"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gradingSystem">
+                            Grading System
+                        </label>
+
+                        <select id="gradingSystem">
+                            <option value="percentage">
+                                Percentage Based
+                            </option>
+
+                            <option value="grade">
+                                Grade Based
+                            </option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Save Examination Settings
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- System Information -->
+        <section class="content-card">
+
+            <h2>System Information</h2>
+
+            <div class="settings-info">
+
+                <p>
+                    <strong>Application:</strong>
+                    AcadTrack Academic Management System
+                </p>
+
+                <p>
+                    <strong>Version:</strong>
+                    1.0.0
+                </p>
+
+                <p>
+                    <strong>Database:</strong>
+                    SQLite
+                </p>
+
+                <p>
+                    <strong>Storage:</strong>
+                    Local server database
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
